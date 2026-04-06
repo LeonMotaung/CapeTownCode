@@ -1,0 +1,25 @@
+package basics;
+
+public class CreditCard {
+	String name;
+	int acc;
+	float bal;
+	
+	public CreditCard(String name, int acc, float bal) {
+		this.name=name;
+		this.acc=acc;
+		this.bal=bal;
+	}
+	public void getBal() {
+		System.out.println("The balance is "+"R"+bal);	
+	}
+	public void getAcc() {
+		System.out.println("The account number is "+acc );
+	}
+	public static void main(String[] args) {
+		CreditCard card=new CreditCard("Leon Motaung",789456123,15645.30f);
+		System.out.println("The name of the customer is "+card.name);	
+		card.getAcc();
+		card.getBal();
+	}
+}
