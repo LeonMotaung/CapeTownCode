@@ -1,0 +1,28 @@
+package basics;
+
+public class PreditoryCreditCard extends CreditCard{
+	private double interest;
+	public PreditoryCreditCard(String name,int acc, float bal,double charge) {
+		super(name,acc,bal);
+		interest=charge;
+	}
+	public void charge() {
+		if (bal > 0) {
+			bal=bal-5;
+			System.out.println("YOU ARE CHARGED R5 for interest");
+		}
+		else {
+			System.out.println("Your balance is low");
+		}
+		
+	}
+	public static void main(String[] args) {
+	PreditoryCreditCard card=new PreditoryCreditCard("LEEE",56789123, 7890,5);
+	System.out.println("The name of the person is " +card.name);
+	System.out.println("The account number is "+card.acc);
+	System.out.println("The balace is "+ card.bal);
+	
+	card.charge();
+	
+	}
+}
